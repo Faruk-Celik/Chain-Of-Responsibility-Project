@@ -3,25 +3,26 @@ using ChainOfRespProject.Models;
 
 namespace ChainOfRespProject.ChainOfResponsibility
 {
-    public class Treasurer : Employee
+    public class Manager : Employee
     {
         private readonly Context _context;
 
-        public Treasurer ( Context context )
+
+        public Manager ( Context context )
         {
             _context = context;
         }
 
         public override void ProcessRequest ( CustomerProcessViewModel model )
         {
-            if (model.Amount <= 80000)
+            if (model.Amount <= 250000)
             {
                 CustomerProcess customerProcess = new CustomerProcess();
-                
+
                 customerProcess.Amount = model.Amount;
                 customerProcess.Name = model.Name;
-                customerProcess.EmployeeName = "Faruk Çelik";
-                customerProcess.Description = "Wanted Price Has been payed by Cashier ";
+                customerProcess.EmployeeName = "Ömer Faruk Gözegir";
+                customerProcess.Description = "Wanted Price Has been payed by Branch Manager ";
                 _context.CustomerProcesses.Add(customerProcess);
                 _context.SaveChanges();
             }
@@ -31,8 +32,8 @@ namespace ChainOfRespProject.ChainOfResponsibility
 
                 customerProcess.Amount = model.Amount;
                 customerProcess.Name = model.Name;
-                customerProcess.EmployeeName = "Faruk Çelik";
-                customerProcess.Description = "Wanted Price Has Not been paid by Cashier's and sended by Assistant Director";
+                customerProcess.EmployeeName = "Ömer Faruk Gözegir";
+                customerProcess.Description = "Wanted Price Has Not been paid by Branch Manager and sended by Regional Director";
                 _context.CustomerProcesses.Add(customerProcess);
                 _context.SaveChanges();
                 NextApprover.ProcessRequest(model);
