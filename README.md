@@ -1,5 +1,14 @@
 # ChainOfRespProject
 
+<h2>This project is based on a small bank credit transaction scenario. The customer comes in and communicates the amount of credit they wish to take out to the bank. The bank employees have specific payment limits, and the customer is directed to the appropriate employee based on the amount.
+  
+For example:
+
+A customer wants to take out a loan of 75,000.00 TL. Since the teller has a payment limit ranging from 1 TL to 80,000.00 TL, the teller will handle this transaction. However, if the customer had requested a loan of 80,000.00 TL, the Assistant Branch Manager, who handles transactions between 80,000.00 TL and 150,000.00 TL, would have processed this transaction.</h2>
+
+
+<h3>Visuals About the Project</h3>
+
 ![Screenshot 2024-07-26 at 14-52-24 ](https://github.com/user-attachments/assets/83e3b7c7-b9b2-4ce3-8695-75c4ef990476)
 
 ![Ekran görüntüsü 2024-07-26 145329](https://github.com/user-attachments/assets/77c0bd7a-51fe-42cb-85e1-1bba8ae90f51)
